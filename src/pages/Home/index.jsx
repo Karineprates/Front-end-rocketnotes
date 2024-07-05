@@ -14,6 +14,7 @@ import { Note } from '../../components/Note';
 
 
 export function Home() {
+  
   const [search, setSearch] = useState("");
   const [tags, setTags] = useState([]);
   const [tagsSelected, setTagsSelected] = useState([]);
