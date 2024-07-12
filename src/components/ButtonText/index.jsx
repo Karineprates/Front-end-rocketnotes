@@ -1,4 +1,7 @@
 import { Container } from "./styles";
+import PropTypes from 'prop-types';
+
+
 
 export function ButtonText ({title, isActive = false, ...rest}) {
   return (
@@ -11,3 +14,8 @@ export function ButtonText ({title, isActive = false, ...rest}) {
     </Container>
   );
 }
+
+ButtonText.propTypes = {
+  title: PropTypes.string.isRequired,
+  isActive: PropTypes.bool,
+};

@@ -1,5 +1,6 @@
 import { Container } from './styles';
 import {Tag} from '../Tag';
+import PropTypes from 'prop-types';
 
 export function Note ({data, ...rest}) {
 
@@ -20,3 +21,15 @@ export function Note ({data, ...rest}) {
   )
 
 }
+
+Note.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+      })
+    ),
+  }).isRequired,
+};
